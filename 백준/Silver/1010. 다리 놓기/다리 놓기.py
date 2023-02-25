@@ -9,6 +9,5 @@ def factorial(n):
 T = int(input())
 for _ in range(T):
     N, M = map(int, input().split())
-    answer = 0
 
     print(factorial(M)//(factorial(N)*factorial(M-N)))
