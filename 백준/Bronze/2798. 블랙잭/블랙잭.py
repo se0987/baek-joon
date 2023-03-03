@@ -1,8 +1,10 @@
-N, M = map(int,input().split())
+N, M = map(int, input().split())
 cards = list(map(int, input().split()))
-from itertools import combinations
 mx = 0
-for i in combinations(cards, 3):
-    if M>=sum(i) > mx:
-        mx = sum(i)
+for a in range(N):
+    for b in range(a+1, N):
+        for c in range(b+1, N):
+            x = cards[a] + cards[b] + cards[c]
+            if mx < x <= M:
+                mx = x
 print(mx)
